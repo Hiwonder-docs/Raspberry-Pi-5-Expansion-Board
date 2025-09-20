@@ -699,7 +699,7 @@ There are 2 bus servo interfaces on the Raspberry Pi expansion board. Let's test
 
 <img class="common_img" src="../_static/media/chapter_2/section_10/media/image4.png"  style="width:500px"/>
 
-(2) Click <img class="common_img" src="../_static/media/chapter_2/section_10/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click <img src="../_static/media/chapter_2/section_10/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
 <img src="../_static/media/chapter_2/section_10/media/image6.png"  />
 
@@ -941,7 +941,7 @@ This section aims to demonstrate the control principle and program of "**ros_rob
 
 The "**ros_robot_controller_sdk.py**" is a Python SDK designed for serial communication between the Raspberry Pi and STM32 development board. It enables the control of various hardware components such as LEDs, buzzers, and motors. The Raspberry Pi 5B communicates with the STM32 via serial port using the Cyclic Redundancy Check (CRC) algorithm to drive the underlying hardware on the MM32 chip. Let's take a brief analysis in the following section:
 
-<img src="../_static/media/chapter_2/section_15/media/image2.png" style="width:5.75833in;height:2.40069in" />
+<img class="common_img" src="../_static/media/chapter_2/section_15/media/image2.png" style="width:5.75833in;height:2.40069in" />
 
 (1) The data packet format is `0xAA 0x55 Length Function ID Data Checksum`. Among them, `0xAA` and `0x55` are start bytes used to identify the start of the data packet; `Length` indicates its length; `Function` indicates the type of function; `ID` represents the device ID; `Data` is the content of the data; and `Checksum` is the checksum.
 
@@ -949,7 +949,7 @@ The "**ros_robot_controller_sdk.py**" is a Python SDK designed for serial commun
 
 (3) Function types: The `Function` field of the data packet represents different types of functions. The SDK defines multiple enumeration types, such as `PacketFunction` represents the different types of functions; `PACKET_FUNC_LED` represents LED control; `PACKET_FUNC_BUZZER` represents buzzer control; and `PACKET_FUNC_PWM_SERVO` represents PWM servo control.
 
-<img src="../_static/media/chapter_2/section_15/media/image3.png" style="width:5.76042in;height:4.22639in" />
+<img class="common_img" src="../_static/media/chapter_2/section_15/media/image3.png" style="width:5.76042in;height:4.22639in" />
 
 (1) The `checksum_crc8(data)` function calculates the CRC8 checksum. It receives a data list as input, performs XOR and table look-ups on the data to obtain the checksum, and returns the value of the checksum.
 
