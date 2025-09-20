@@ -6,11 +6,11 @@ If you installed the image control expansion board using the official online too
 
 (1) Set up the environment and hardware control according to the appendix "**Extend Course: [Raspberry Pi 5 Controller](https://wiki.hiwonder.com/projects/Raspberry-Pi-5-Controller/en/latest/)**."
 
-<img class="common_img" src="../_static/media/chapter_2/section_14/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_14/media/image2.png" />
 
 (2) Establish a remote connection using "**MobaXterm**" after successful configuration. (Refer to [**Raspberry Pi 5 Controller -\> 2. Raspberry Pi 5 Basic Operation and Configuration -\> 2.2 Remote Access and Remote File Transfer**](https://wiki.hiwonder.com/projects/Raspberry-Pi-5-Controller/en/latest/docs/2_Raspberry_Pi_5_Basic_Operation_and_Configuration.html#remote-access-and-remote-file-transfer))
 
-<img class="common_img" src="../_static/media/chapter_2/section_14/media/image3.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_14/media/image3.png" />
 
 (3) Modify the serial port settings: After connecting remotely, enter the command:
 
@@ -18,7 +18,7 @@ If you installed the image control expansion board using the official online too
 sudo nano /boot/firmware/config.txt
 ```
 
-<img class="common_img" src="../_static/media/chapter_2/section_14/media/image4.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_14/media/image4.png" />
 
 (4) Scroll to the end of the file and input the following to adjust the serial port:
 
@@ -29,7 +29,7 @@ enable_uart=1
 dtparam=uart0=on
 ```
 
-<img class="common_img" src="../_static/media/chapter_2/section_14/media/image5.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_14/media/image5.png" />
 
 (5) Press Ctrl+S to save, then Ctrl+X to exit. Enter the command "**sudo reboot**" to reboot the Raspberry Pi .
 
@@ -45,13 +45,13 @@ ls /dev - al
 
 (7) Scroll down to locate the content shown below, which confirms a successful modification:
 
-<img class="common_img" src="../_static/media/chapter_2/section_14/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_14/media/image8.png" />
 
 (8) Transfer the demo file: Refer to "**[2.15 "board_demo" Analysis](#anchor_2_15)**" to copy the board_demo from the appendix to /home/pi/ on the Raspberry Pi.
 
-<img class="common_img" src="../_static/media/chapter_2/section_14/media/image9.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_14/media/image9.png" />
 
-<img class="common_img" src="../_static/media/chapter_2/section_14/media/image10.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_14/media/image10.png" />
 
 (9) Run the example program (e.g., controlling the RGB light on the expansion board):
 
@@ -63,7 +63,7 @@ cd /home/pi/board_demo/
 
 (10) After entering the board_demo folder, enter the command "**python3 rgb_control_demo.py**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_14/media/image12.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_14/media/image12.png" />
 
 Press Ctrl+C to terminate the program.
 
@@ -75,7 +75,7 @@ This section demonstrates controlling the RGB light color on the expansion board
 
 RGB represents red, green, blue three color channels. Their parameter ranges are all from 0 to 255, with higher value indicating darker color. In the program, the flashing frequency of the RGB lights is controlled by modifying the delay time for turning them on and off. The source code of the program is located in : **[/home/pi/board_demo/rgb_control_demo.py](https://drive.google.com/drive/folders/1l0dHNl8qMQo-WB1Af9wp23Msr-wEy8yj?usp=sharing)**
 
-<img class="common_img" src="../_static/media/chapter_2/section_1/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_1/media/image2.png" />
 
 (1) This section demonstrates controlling RGB through calling the `set_rgb()` function in the Board library. Take `board.set_rgb([[1, 255, 0, 0], [2, 255, 0, 0]])` as an example:
 
@@ -95,9 +95,9 @@ The Raspberry Pi expansion board has two RGB lights as pictured:
 
 <img class="common_img" src="../_static/media/chapter_2/section_1/media/image4.png"  style="width:500px" />
 
-(2) Click the icon <img src="../_static/media/chapter_2/section_1/media/image5.png"  /> in the left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click the icon <img src="../_static/media/chapter_2/section_1/media/image5.png" /> in the left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_1/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_1/media/image6.png" />
 
 (3) Enter the command "**cd board_demo/**" in the directory where the program is located.
 
@@ -111,7 +111,7 @@ cd board_demo/
 python3 rgb_control_demo.py
 ```
 
-<img class="common_img" src="../_static/media/chapter_2/section_1/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_1/media/image8.png" />
 
 (5) You can press "**Ctrl+c**" to close this program. If you fail to close the program, repeat the process until you exit.
 
@@ -127,7 +127,7 @@ The section will demonstrate how to achieve color changes flashing every 0.5 sec
 
 RGB represents red, green, blue three color channels. Their parameter ranges are all from 0 to 255, with higher value indicating darker color. In the program, the flashing frequency of the RGB lights is controlled by modifying the delay time for turning them on and off. The source code of the program is located in : /home/pi/board_demo/rgb_control_demo.py
 
-<img class="common_img" src="../_static/media/chapter_2/section_2/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_2/media/image2.png" />
 
 This section demonstrates controlling RGB through calling the `set_rgb()` function in the Board library. Take `board.set_rgb([[1, 255, 0, 0], [2, 255, 0, 0]])` as an example:
 
@@ -149,9 +149,9 @@ The Raspberry Pi expansion board has two RGB lights as pictured:
 
 <img class="common_img" src="../_static/media/chapter_2/section_2/media/image4.png"  style="width:500px" />
 
-(2) Click the icon <img src="../_static/media/chapter_2/section_2/media/image5.png"  /> in the left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click the icon <img src="../_static/media/chapter_2/section_2/media/image5.png" /> in the left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_2/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_2/media/image6.png" />
 
 (3) Enter the command "**cd board_demo/**" in the directory where the program is located.
 
@@ -161,7 +161,7 @@ cd board_demo/
 
 (4) Next, enter the command "**python3 rgb_control_demo.py**" to run the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_2/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_2/media/image8.png" />
 
 (5) You can press "**Ctrl+c**" to close this program. If you fail to close the program, repeat the process until you exit.
 
@@ -177,7 +177,7 @@ This section demonstrates controlling the color of RGB lights through different 
 
 According to the pressed keys, detect the color state of the RGB lights controlled by GPIO port's high and low voltage levels.
 
-<img class="common_img" src="../_static/media/chapter_2/section_3/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image2.png" />
 
 (1) Initialize the Raspberry Pi expansion board and GPIO pins, handle the "**Ctrl+C**" signal, and set a signal handling function to exit the program. In a loop, constantly check the status of two buttons.
 
@@ -203,9 +203,9 @@ The Raspberry Pi expansion board has two keys as pictured:
 
 <img class="common_img" src="../_static/media/chapter_2/section_3/media/image4.png"  style="width:500px" />
 
-(2) Click the icon <img class="common_img" src="../_static/media/chapter_2/section_3/media/image5.png"  /> in the left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click the icon <img class="common_img" src="../_static/media/chapter_2/section_3/media/image5.png" /> in the left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_3/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image6.png" />
 
 (3) Enter the command "**cd board_demo/**" in the directory where the program is located.
 
@@ -215,7 +215,7 @@ cd board_demo/
 
 (4) Next, enter the command "**python3 rgb_control_demo.py**" to run the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_3/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image8.png" />
 
 (5) Input command  **sudo systemctl stop hw_button_scan.service**.
 
@@ -225,13 +225,13 @@ sudo systemctl stop hw_button_scan.service
 
 (6) Input command "**python3 key.py**". Then press enter key. And it will print a prompt.
 
-<img class="common_img" src="../_static/media/chapter_2/section_3/media/image10.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image10.png" />
 
 Press key1 to set the light to red. Press key2 to set the light to blue. Press CTRL+C to close the program.
 
-(7) After completing the program, it is necessary to restart the `hw_button_scan` service. Input the command to restart the service command  "sudo systemctl start hw_button_scan.service".
+(7) After completing the program, it is necessary to restart the `hw_button_scan` service. Input the command to restart the service command  "**sudo systemctl start hw_button_scan.service**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_3/media/image11.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_3/media/image11.png" />
 
 ### 2.4.4 Project Outcome
 
@@ -251,7 +251,7 @@ Set the `set_buzzer()` function to adjust the buzzer's high and low voltage leve
 
 The source code of the program is located in "**/home/pi/board_demo/ buzzer_control_demo.py/**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_4/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image2.png" />
 
 The program calls the `set_buzzer()` function in the `Board` library to adjust the buzzer's high and low voltage levels. The parameters in the `set_buzzer(1900, 0.1, 0.9, 1)` function are set to a frequency of 1900Hz, with the buzzer sounding for 0.1s, followed by a 0.9s pause, and repeating once.
 
@@ -267,11 +267,11 @@ A buzzer is mounted on the Raspberry Pi expansion board, as shown below:
 
 <img class="common_img" src="../_static/media/chapter_2/section_4/media/image4.png"  style="width:500px" />
 
-(1) Click <img src="../_static/media/chapter_2/section_4/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(1) Click <img src="../_static/media/chapter_2/section_4/media/image5.png" /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_4/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image6.png" />
 
-(2) Enter the command "**cd board_demo/**" in the directory where the program is, and press "Enter".
+(2) Enter the command "**cd board_demo/**" in the directory where the program is, and press "**Enter**".
 
 ```bash
 cd board_demo/
@@ -279,7 +279,7 @@ cd board_demo/
 
 (3) Enter the command "**python3 buzzer_control_demo.py**", and press "**Enter**" to activate the game. The buzzer will make a short sound and then three long sounds to automatically exit the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_4/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_4/media/image8.png" />
 
 ### 2.5.4 Program Outcome
 
@@ -295,9 +295,9 @@ This section focuses on controlling the rotation of a single servo by utilizing 
 
 In the program, modify the runtime and servo pulse width to control the rotation of the servo. The source code of the program is located in "**/home/pi/board_demo/single_servos.py**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_5/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_5/media/image2.png" />
 
-The program calls the `pwm_servo_set_position()` function in the "Board" library to implement the servo control. Take `board.pwm_servo_set_position(0.5, [[1, 1500]])` as an example, among them:
+The program calls the `pwm_servo_set_position()` function in the "**Board**" library to implement the servo control. Take `board.pwm_servo_set_position(0.5, [[1, 1500]])` as an example, among them:
 
 The first parameter `0.5` indicates the servo's runtime is 500ms. If it is `1`, indicating the runtime is 1000ms.
 
@@ -315,9 +315,9 @@ There are 6 PWM servo interfaces on the Raspberry Pi expansion board. Let's test
 
 <img class="common_img" src="../_static/media/chapter_2/section_5/media/image4.png"  style="width:500px" />
 
-(2) Click <img src="../_static/media/chapter_2/section_5/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click <img src="../_static/media/chapter_2/section_5/media/image5.png" /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_5/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_5/media/image6.png" />
 
 (3) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "**Enter**".
 
@@ -327,7 +327,7 @@ cd board_demo/
 
 (4) Enter the command of running the program "**python3 single_servos.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_5/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_5/media/image8.png" />
 
 (5) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -347,13 +347,13 @@ A servo, also known as a servo motor, was initially used to control the steering
 
 The servo consists of four parts: a motor, a control circuit board, a gear set, and a potentiometer.
 
-<img class="common_img" src="../_static/media/chapter_2/section_5_1/media/image4.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_5_1/media/image4.png" />
 
 A traditional servo has three wires: a power wire, a GND wire, and a signal control wire.
 
 Its working principle is as follows: when the control circuit board of the servo receives a pulsing signal, it controls the rotation of the motor. The motor drives the output shaft to rotate via a gear set, and the rotation of the output shaft also drives the potentiometer to rotate. The control circuit board detects the rotation of the potentiometer and determines if it has rotated to the specified angle. If it has, the motor stops rotating; otherwise, the motor continues to rotate.
 
-<img class="common_img" src="../_static/media/chapter_2/section_5_1/media/image5.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_5_1/media/image5.png" />
 
 (3)  **PWM Servo Introduction**
 
@@ -361,9 +361,9 @@ A PWM servo is controlled by PWM, which differentiates it from the traditional a
 
 Before assembling a servo, it is necessary to adjust the servo to the neutral position.
 
-The neutral position of a servo is its initial position, and it is used as the "zero point" for positive and negative angle rotations. It's necessary to adjust the servo to the neutral position before installing it onto the servo horn.
+The neutral position of a servo is its initial position, and it is used as the "**zero point**" for positive and negative angle rotations. It's necessary to adjust the servo to the neutral position before installing it onto the servo horn.
 
-This is because when a servo rotates, its rotating components drive the potentiometer to rotate, and the software assumes that the neutral position is the "zero point". Otherwise, the potentiometer may enter a "dead zone", causing the entire components to malfunction. In robot applications, this can result in the servo failing to reach the specified angle or producing inconsistent action groups.
+This is because when a servo rotates, its rotating components drive the potentiometer to rotate, and the software assumes that the neutral position is the "**zero point**". Otherwise, the potentiometer may enter a "**dead zone**", causing the entire components to malfunction. In robot applications, this can result in the servo failing to reach the specified angle or producing inconsistent action groups.
 
 ## 2.7 PWM Servo Speed Control
 
@@ -379,7 +379,7 @@ servo, please refer to "[**2.6 Single PWM Servo Control**](#anchor_2_6)".
 
 In the program, modify the runtime, servo ID, and servo pulse width to control the rotation speed of the servo. The source code of the program is located in "**/home/pi/board_demo/pwm_servo_speed.py**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_6/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_6/media/image2.png" />
 
 The program calls the `pwm_servo_set_position()` function in the `Board` library to implement the servo control. Take `board.pwm_servo_set_ position(0.5, [[1, 1500]])` as an example, among them:
 
@@ -399,9 +399,9 @@ There are 6 PWM servo interfaces on the Raspberry Pi expansion board. Let's test
 
 <img class="common_img" src="../_static/media/chapter_2/section_6/media/image4.png"  style="width:500px" />
 
-(2) Click <img src="../_static/media/chapter_2/section_6/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click <img src="../_static/media/chapter_2/section_6/media/image5.png" /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_6/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_6/media/image6.png" />
 
 (3) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "**Enter**".
 
@@ -411,7 +411,7 @@ cd board_demo/
 
 Enter the command of running the program "**python3 pwm_servo_speed.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_6/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_6/media/image8.png" />
 
 (4) To close the program, press "**Ctrl+C**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -437,9 +437,9 @@ Let's view the implementation idea of this lesson:
 
 Control the servo rotation by transmitting pulse signals and setting the rotation angle and duration of the servo through code parameters. The source code of the program is located in "**/home/pi/board_demo/pwm_servo_control\_ demo.py**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image2.png" />
 
-The program calls the `pwm_servo_set_position()` function in the "Board" library to implement the servo control. Take `board.pwm_servo_set_position(1, [[1, 1100]])` as an example, among them:
+The program calls the `pwm_servo_set_position()` function in the "**Board**" library to implement the servo control. Take `board.pwm_servo_set_position(1, [[1, 1100]])` as an example, among them:
 
 The first parameter `1` indicates the servo's runtime is 1s.
 
@@ -449,7 +449,7 @@ The second parameter `[[1, 1100]]` represents setting the No.1 servo's pulse wid
 
 There are 6 PWM servo interfaces on the Raspberry Pi expansion board. Let's test by connecting the No.1 and No.2 servo interfaces, as shown below: 
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image3.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image3.png" style="width:500px" />
 
 ### 2.8.3 Operation Steps
 
@@ -457,11 +457,11 @@ There are 6 PWM servo interfaces on the Raspberry Pi expansion board. Let's test
 
 <img class="common_img" src="../_static/media/chapter_2/section_7/media/image4.png"  style="width:500px" />
 
-(2) Click <img src="../_static/media/chapter_2/section_7/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click <img src="../_static/media/chapter_2/section_7/media/image5.png" /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image6.png" />
 
-(3) Enter the command "**cd board_demo/**". Then press "Enter" to navigate to the directory where the demo program is located.
+(3) Enter the command "**cd board_demo/**". Then press "**Enter**" to navigate to the directory where the demo program is located.
 
 ```bash
 cd board_demo/
@@ -469,7 +469,7 @@ cd board_demo/
 
 (4) Enter the command "**python3 pwm_servo_control_demo.py**". Press "**Enter**" to execute the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image8.png" />
 
 (5) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -491,7 +491,7 @@ The program sets to rotate the servo connected to No.1 servo interface first by 
 cd /home/pi/board_demo/
 ```
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image7.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image7.png" />
 
 (2) Enter the command "**vim pwm_servo_control_demo.py**". Press "**Enter**" to open the program file.
 
@@ -509,19 +509,19 @@ vim pwm_servo_control_demo.py
 
 (4) Locate the codes shown below in the opened page:
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image11.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image11.png" />
 
-(5) Press "i" on the keyboard to enter the editing mode.
+(5) Press "**i**" on the keyboard to enter the editing mode.
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image12.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image12.png" />
 
 (6) Modify the first parameters "1" into "2" in parentheses of the `board.pwm_servo_set_position`, as shown below:
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image13.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image13.png" />
 
-(7) After the modification is completed, press "Esc" on the keyboard. Then enter ":wq" (do not miss the colon before wq), and press "Enter" to save and exit the program.
+(7) After the modification is completed, press "**Esc**" on the keyboard. Then enter "**:wq**" (do not miss the colon before wq), and press "**Enter**" to save and exit the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image14.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image14.png" />
 
 (8) After it exits, enter the command "**python3 pwm_servo_control_demo. Py**" to see the modified effect.
 
@@ -531,15 +531,15 @@ The program sets the initial state of servo 1 to rotate in a loop between 54 and
 
 (1) Follow the steps in "[**2.8.5 Function Extension-> Replace Servo Interface**](#anchor_2_8_5)" to open the program file, and locate the codes shown below.
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image15.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image15.png" />
 
 (2) The servo rotation range is between 500 and 2500 pulse widths, which is equivalent to 0 to 180 degrees. For example, 1500 pulse width is 90 degrees, which means that 1 degree is equal to 11.1 pulse widths. The formula for converting angles to position values is 11.1 \* angle + 500.
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image16.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image16.png" />
 
-(3) After the modification is completed, press "Esc" on the keyboard. Then enter ":wq" (do not miss the colon before wq), and press "Enter" to save and exit the program.
+(3) After the modification is completed, press "**Esc**" on the keyboard. Then enter "**:wq**" (do not miss the colon before wq), and press "**Enter**" to save and exit the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image14.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_7/media/image14.png" />
 
 (4) After it exits, enter the command "**python3 pwm_servo_control_demo. Py**" to see the modified effect.
 
@@ -549,7 +549,7 @@ The program sets the initial state of servo 1 to rotate in a loop between 54 and
 
 Read the servo ID, voltage, position, and temperature data of the bus servo on the expansion board in the program. The source code of the program is located in "**/home/pi/board_demo/bus_servos_read.py**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_8/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_8/media/image2.png" />
 
 Call the `board.bus_servo_read_id(), board.bus_servo_read_vin(), board.bus_servo_read_temp(), board.bus_servo_read_position()` functions in the `Board` library to read the data of the bus servo.
 
@@ -565,11 +565,11 @@ There are 2 bus servo interfaces on the Raspberry Pi expansion board. Let's test
 
 <img class="common_img" src="../_static/media/chapter_2/section_8/media/image4.png"  style="width:500px" />
 
-(2) Click <img src="../_static/media/chapter_2/section_8/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click <img src="../_static/media/chapter_2/section_8/media/image5.png" /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_8/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_8/media/image6.png" />
 
-(3) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "Enter".
+(3) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "**Enter**".
 
 ```bash
 cd board_demo/
@@ -577,7 +577,7 @@ cd board_demo/
 
 Enter the command of running the program "**python3 bus_servos_read.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_8/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_8/media/image8.png" />
 
 (4) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -617,7 +617,7 @@ This lesson focuses on controlling the rotation of the bus servo on the expansio
 
 In the program, modify the ID, runtime, and position of the servo to control the rotation of the bus servo. The source code of the program is located in "**/home/pi/board_demo/bus_servo_turn.py**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_9/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_9/media/image2.png" />
 
 The program calls the `board.bus_servo_set_position` function in the `Board` library to implement the servo control. Take `board.bus_servo_set _position(1, [[1, 500], [2, 500]])` as an example:
 
@@ -639,9 +639,9 @@ There are 2 bus servo interfaces on the Raspberry Pi expansion board. Let's test
 
 <img class="common_img" src="../_static/media/chapter_2/section_9/media/image4.png"  style="width:500px"/>
 
-(2) Click <img src="../_static/media/chapter_2/section_9/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click <img src="../_static/media/chapter_2/section_9/media/image5.png" /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_9/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_9/media/image6.png" />
 
 (3) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "**Enter**".
 
@@ -655,7 +655,7 @@ Enter the command of running the program "**python3 bus_servos_turn.py**", and p
 python3 bus_servos_turn.py
 ```
 
-<img class="common_img" src="../_static/media/chapter_2/section_9/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_9/media/image8.png" />
 
 (4) To close the program, press "**Ctrl+C**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -671,7 +671,7 @@ This lesson aims to control the rotation speed of the bus servo on the expansion
 
 In the program, modify the ID, runtime, and position of the servo to control the rotation of the bus servo. The source code of the program is located in "**/home/pi/board_demo/bus_servo_speed.py**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_10/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_10/media/image2.png" />
 
 The program calls the `board.bus_servo_set_position` function in the "**Board**" library to implement the servo control.
 
@@ -699,9 +699,9 @@ There are 2 bus servo interfaces on the Raspberry Pi expansion board. Let's test
 
 <img class="common_img" src="../_static/media/chapter_2/section_10/media/image4.png"  style="width:500px"/>
 
-(2) Click <img src="../_static/media/chapter_2/section_10/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click <img src="../_static/media/chapter_2/section_10/media/image5.png" /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img src="../_static/media/chapter_2/section_10/media/image6.png"  />
+<img src="../_static/media/chapter_2/section_10/media/image6.png" />
 
 (3) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "**Enter**".
 
@@ -711,7 +711,7 @@ cd board_demo/
 
 Enter the command of running the program "**python3 bus_servo_speed.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_10/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_10/media/image8.png" />
 
 (4) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -727,7 +727,7 @@ This lesson demonstrates on how to drive a DC motor on the expansion board to ro
 
 This program enables you to set the parameters of the motor, with positive values making it move forward and negative values making it move backward. The source code of the program is located in "**/home/pi/board_demo/motor_ control_demo.py**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_11/media/image2.png" />
 
 The `set_motor_duty()` function in the `Board` library is called for the control of chassis motor. Take `board.set_motor_duty([[1, 35]])` as an example:
 
@@ -747,19 +747,19 @@ There are 4 motor interfaces on the Raspberry Pi expansion board, as shown below
 
 <img class="common_img" src="../_static/media/chapter_2/section_11/media/image4.png"  style="width:500px"/>
 
-(1) Click <img src="../_static/media/chapter_2/section_11/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(1) Click <img src="../_static/media/chapter_2/section_11/media/image5.png" /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_11/media/image6.png" />
 
-(2) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "Enter".
+(2) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "**Enter**".
 
 ```bash
 cd board_demo/
 ```
 
-(3) Enter the command of controlling the motor rotation "**python3 motor_control_demo.py**", and press "Enter".
+(3) Enter the command of controlling the motor rotation "**python3 motor_control_demo.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_11/media/image8.png" />
 
 (4) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -778,15 +778,15 @@ After the program is activated, the DC motor M1 will rotate clockwise at a speed
 
 If you want to modify the speed and orientation of motor rotation,please follow the steps below.
 
-<span class="mark">This section demonstrates controlling the motor connected to the</span> interface 1. It will rotate clockwise at a speed of 80 for 2 seconds, then reverse at a speed of 60 for another 2 seconds.
+This section demonstrates controlling the motor connected to the</span> interface 1. It will rotate clockwise at a speed of 80 for 2 seconds, then reverse at a speed of 60 for another 2 seconds.
 
-(1) Enter the command "**cd /home/pi/board_demo/**" to navigate to the directory where the demo program is located, then press "Enter".
+(1) Enter the command "**cd /home/pi/board_demo/**" to navigate to the directory where the demo program is located, then press "**Enter**".
 
 ```bash
 cd /home/pi/board_demo/
 ```
 
-(2) Enter the command of opening the program "**vim motor_control_ demo.py**", and press "**Enter**".
+(2) Enter the command of opening the program "**vim motor_control_demo.py**", and press "**Enter**".
 
 ```bash
 vim motor_control\_ demo.py
@@ -794,19 +794,19 @@ vim motor_control\_ demo.py
 
 (3) Locate the codes shown below in the opened page.
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image10.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_11/media/image10.png" />
 
-(4) Press "i" on the keyboard to enter the editing mode.
+(4) Press "**i**" on the keyboard to enter the editing mode.
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image11.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_11/media/image11.png" />
 
 (5) Modify the section highlighted in the boxed area below. Please note that when the speed value is positive, the motor rotates clockwise. The higher the value, the faster the clockwise rotation. When the speed value is negative, the motor rotates counterclockwise, and the lower the value, the faster the counterclockwise rotation.
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image12.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_11/media/image12.png" />
 
-(6) After the modification is completed, press "Esc" on the keyboard. Then enter ":wq" (do not miss the colon before wq), and press "Enter" to save and exit the program.
+(6) After the modification is completed, press "**Esc**" on the keyboard. Then enter "**:wq**" (do not miss the colon before wq), and press "**Enter**" to save and exit the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image13.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_11/media/image13.png" />
 
 (7) After saving the program, follow the steps in "[**2.12.3 Operation Steps**](#anchor_2_12_3)" to view its execution effects.
 
@@ -816,11 +816,11 @@ vim motor_control\_ demo.py
 
 (2) Change the motor interface from M1 to M2, as shown below:
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image14.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_11/media/image14.png" />
 
-(3) After the modification is completed, press "Esc" on the keyboard. Then enter ":wq" (do not miss the colon before wq), and press "Enter" to save and exit the program.
+(3) After the modification is completed, press "**Esc**" on the keyboard. Then enter "**:wq**" (do not miss the colon before wq), and press "**Enter**" to save and exit the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image13.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_11/media/image13.png" />
 
 (4) After saving the program, follow the steps in "[**2.12.3 Operation Steps**](#anchor_2_12_3)" to view its execution effects.
 
@@ -832,7 +832,7 @@ This lesson aims to demonstrate on how to utilize the high and low voltage level
 
 This program controls the high and low voltage levels of a GPIO port on the Raspberry Pi to rotate a fan module. The fan will rotate clockwise for 3s, followed by counterclockwise rotation for another 3s. The source code of the program is located in "**/home/pi/board_demo/gpio_control.py**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_12/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_12/media/image2.png" />
 
 (1) This section provides GPIO pin control through the gpiod module.
 
@@ -862,11 +862,11 @@ There are 4 GPIO ports on the Raspberry Pi expansion board. Let's use GPIO7 and 
 
 <img class="common_img" src="../_static/media/chapter_2/section_12/media/image4.png" style="width:500px" />
 
-(2) Click <img src="../_static/media/chapter_2/section_12/media/image5.png"  /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
+(2) Click <img src="../_static/media/chapter_2/section_12/media/image5.png" /> in the top left corner of the desktop, or press the shortcut key "**Ctrl+Alt+T**" to open the command line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_12/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_12/media/image6.png" />
 
-(3) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "Enter".
+(3) Enter the command "**cd board_demo/**" to navigate to the directory where the demo program is located, then press "**Enter**".
 
 ```bash
 cd board_demo/
@@ -874,7 +874,7 @@ cd board_demo/
 
 Enter the command of running the program "**python3 gpio_control.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_12/media/image8.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_12/media/image8.png" />
 
 (4) Press "**Ctrl+c**" to close the program. If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -897,7 +897,7 @@ In the program, the get_imu() method of the expansion board is used to obtain IM
 
 The source code of this program is located at: **/home/pi/board_demo/imu_demo.py**
 
-<img class="common_img" src="../_static/media/chapter_2/section_13/media/image2.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_13/media/image2.png" />
 
 ### 2.14.2 Preparation
 
@@ -911,9 +911,9 @@ Power on the device and connect the robot using the VNC remote connection tool.
 
 <img class="common_img" src="../_static/media/chapter_2/section_13/media/image4.png"  style="width:500px"/>
 
-(1) Click the icon <img src="../_static/media/chapter_2/section_13/media/image5.png"  /> in the upper - left corner of the desktop or press the shortcut key "**Ctrl+Alt+T**" to open the command - line terminal.
+(1) Click the icon <img src="../_static/media/chapter_2/section_13/media/image5.png" /> in the upper - left corner of the desktop or press the shortcut key "**Ctrl+Alt+T**" to open the command - line terminal.
 
-<img class="common_img" src="../_static/media/chapter_2/section_13/media/image6.png"  />
+<img class="common_img" src="../_static/media/chapter_2/section_13/media/image6.png" />
 
 (2) Enter the command "**cd board_demo/**" to navigate to the directory where the program is located, and then press Enter.
 
