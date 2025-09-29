@@ -125,7 +125,7 @@ The section will demonstrate how to achieve color changes flashing every 0.5 sec
 
 ### 2.3.1 Working Principle
 
-RGB represents red, green, blue three color channels. Their parameter ranges are all from 0 to 255, with higher value indicating darker color. In the program, the flashing frequency of the RGB lights is controlled by modifying the delay time for turning them on and off. The source code of the program is located in : /home/pi/board_demo/rgb_control_demo.py
+RGB represents red, green, blue three color channels. Their parameter ranges are all from 0 to 255, with higher value indicating darker color. In the program, the flashing frequency of the RGB lights is controlled by modifying the delay time for turning them on and off. The source code of the program is located in : **/home/pi/board_demo/rgb_control_demo.py**
 
 <img class="common_img" src="../_static/media/chapter_2/section_2/media/image2.png" />
 
@@ -161,7 +161,9 @@ cd board_demo/
 
 (4) Next, enter the command "**python3 rgb_control_demo.py**" to run the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_2/media/image8.png" />
+```
+python3 rgb_control_demo.py
+```
 
 (5) You can press "**Ctrl+c**" to close this program. If you fail to close the program, repeat the process until you exit.
 
@@ -215,6 +217,10 @@ cd board_demo/
 
 (4) Next, enter the command "**python3 rgb_control_demo.py**" to run the program.
 
+```
+python3 rgb_control_demo.py
+```
+
 <img class="common_img" src="../_static/media/chapter_2/section_3/media/image8.png" />
 
 (5) Input command  **sudo systemctl stop hw_button_scan.service**.
@@ -225,13 +231,17 @@ sudo systemctl stop hw_button_scan.service
 
 (6) Input command "**python3 key.py**". Then press enter key. And it will print a prompt.
 
-<img class="common_img" src="../_static/media/chapter_2/section_3/media/image10.png" />
+```
+python3 key.py
+```
 
 Press key1 to set the light to red. Press key2 to set the light to blue. Press CTRL+C to close the program.
 
 (7) After completing the program, it is necessary to restart the `hw_button_scan` service. Input the command to restart the service command  "**sudo systemctl start hw_button_scan.service**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_3/media/image11.png" />
+```
+sudo systemctl start hw_button_scan.service
+```
 
 ### 2.4.4 Project Outcome
 
@@ -279,7 +289,9 @@ cd board_demo/
 
 (3) Enter the command "**python3 buzzer_control_demo.py**", and press "**Enter**" to activate the game. The buzzer will make a short sound and then three long sounds to automatically exit the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_4/media/image8.png" />
+```
+python3 buzzer_control_demo.py
+```
 
 ### 2.5.4 Program Outcome
 
@@ -327,7 +339,9 @@ cd board_demo/
 
 (4) Enter the command of running the program "**python3 single_servos.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_5/media/image8.png" />
+```
+python3 single_servos.py
+```
 
 (5) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -339,11 +353,11 @@ Once the program is executed, the Raspberry Pi expansion board can adjust the pu
 
 *  **Servo Working Principle**
 
-(1) **What is a Servo**
+(1) What is a Servo
 
 A servo, also known as a servo motor, was initially used to control the steering of ships. Due to its ability to precisely control the rotation angle of the rubber, it is commonly used in mechanical systems with high precision requirements. Servos play a crucial role in robots, including both industrial and home service robots, all of which necessitate precise control capabilities. Servos act as the joints in robots, functioning as part of the actuator system. Therefore, servos can be metaphorically described as the muscles of robots, providing them with the necessary power.
 
-(2) **How does a Servo Work**
+(2) How does a Servo Work
 
 The servo consists of four parts: a motor, a control circuit board, a gear set, and a potentiometer.
 
@@ -355,7 +369,7 @@ Its working principle is as follows: when the control circuit board of the servo
 
 <img class="common_img" src="../_static/media/chapter_2/section_5_1/media/image5.png" />
 
-(3)  **PWM Servo Introduction**
+(3)  PWM Servo Introduction
 
 A PWM servo is controlled by PWM, which differentiates it from the traditional analog servo that requires continuous PWM signals to maintain a specific position or rotate at a certain speed. However, a PWM servo only needs to receive one PWM signal to remain in a specific position.
 
@@ -411,7 +425,9 @@ cd board_demo/
 
 Enter the command of running the program "**python3 pwm_servo_speed.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_6/media/image8.png" />
+```
+python3 pwm_servo_speed.py
+```
 
 (4) To close the program, press "**Ctrl+C**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -467,9 +483,11 @@ There are 6 PWM servo interfaces on the Raspberry Pi expansion board. Let's test
 cd board_demo/
 ```
 
-(4) Enter the command "**python3 pwm_servo_control_demo.py**". Press "**Enter**" to execute the program.
+(4) Enter the command "**python3 pwm_servo_speed.py**". Press "**Enter**" to execute the program.
 
-<img class="common_img" src="../_static/media/chapter_2/section_7/media/image8.png" />
+```
+python3 pwm_servo_speed.py
+```
 
 (5) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -523,7 +541,13 @@ vim pwm_servo_control_demo.py
 
 <img class="common_img" src="../_static/media/chapter_2/section_7/media/image14.png" />
 
-(8) After it exits, enter the command "**python3 pwm_servo_control_demo. Py**" to see the modified effect.
+(8) After it exits, enter the command "**python3 pwm_servo_control_demo. py**" to see the modified effect.
+
+```
+python3 pwm_servo_control_demo.py
+```
+
+
 
 * **Modify Rotation Angle**
 
@@ -541,7 +565,11 @@ The program sets the initial state of servo 1 to rotate in a loop between 54 and
 
 <img class="common_img" src="../_static/media/chapter_2/section_7/media/image14.png" />
 
-(4) After it exits, enter the command "**python3 pwm_servo_control_demo. Py**" to see the modified effect.
+(4) After it exits, enter the command "**python3 pwm_servo_control_demo.py**" to see the modified effect.
+
+```
+python3 pwm_servo_control_demo.py
+```
 
 <p id="anchor_2_9"></p>
 
@@ -577,7 +605,9 @@ cd board_demo/
 
 Enter the command of running the program "**python3 bus_servos_read.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_8/media/image8.png" />
+```
+python3 bus_servos_read.py
+```
 
 (4) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -711,7 +741,9 @@ cd board_demo/
 
 Enter the command of running the program "**python3 bus_servo_speed.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_10/media/image8.png" />
+```
+python3 bus_servo_speed.py
+```
 
 (4) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -759,7 +791,9 @@ cd board_demo/
 
 (3) Enter the command of controlling the motor rotation "**python3 motor_control_demo.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_11/media/image8.png" />
+```
+python3 motor_control_demo.py
+```
 
 (4) To close the program, press "**Ctrl+c**". If the program cannot be closed successfully, repeat this operation until it exits.
 
@@ -874,13 +908,17 @@ cd board_demo/
 
 Enter the command of running the program "**python3 gpio_control.py**", and press "**Enter**".
 
-<img class="common_img" src="../_static/media/chapter_2/section_12/media/image8.png" />
+```
+python3 gpio_control.py
+```
 
 (4) Press "**Ctrl+c**" to close the program. If the program cannot be closed successfully, repeat this operation until it exits.
 
 ### 2.13.4 Program Outcome
 
 After the program is executed，the GPIO pins transform between high and low voltage levels to control the fan's rotation. Adjust the parameters can change the angle place and runtime of different servos to implement the speed control.
+
+
 
 ## 2.14 IMU Reading
 
@@ -923,7 +961,9 @@ cd board_demo/
 
 Then enter the command "**python3 imu_demo.py**" to run the program, and press Enter.
 
-<img class="common_img" src="../_static/media/chapter_2/section_13/media/image8.png" />
+```
+python3 imu_demo.py
+```
 
 (3) To close this program, press "**Ctrl + c**". If the closure fails, repeat this operation until the program exits.
 
