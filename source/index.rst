@@ -13,3 +13,4 @@ Raspberry Pi 5 Expansion Board
 
    docs/1_Raspberry_Pi_Expansion_Board_Introduction
    docs/2_Expansion_Board_Control_Lesson
+   Download <https://drive.google.com/drive/folders/10olVCee9dYqQ2Swm085caoXdfCOFNc2F?usp=drive_link>
